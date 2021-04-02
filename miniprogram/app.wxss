@@ -1,0 +1,22 @@
+@import '/miniprogram_npm/@vant/weapp/common/index.wxss';
+page {
+  --theme-color: #15417f;
+  --theme-color-1: #8597b6;
+  --hover-bg-color: #dde0e8;
+  --text-color: #505050;
+  --bg-color: #f9f9f9;
+  --bg-color-blue: #f7f7f9;
+  --border: 1px solid #e8e8e8;
+  --text-link: #3a6351;
+  --box-shadow: 0 2px 3px 0 rgb(210 210 210);
+
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica,
+    Segoe UI, Arial, Roboto, 'PingFang SC', 'miui', 'Hiragino Sans GB', 'Microsoft Yahei',
+    sans-serif;
+  /*  reset vant css */
+  /* button */
+  --button-primary-background-color: #15417f;
+  --button-primary-border-color: #15417f;
+  --button-default-height: 60rpx;
+
+}

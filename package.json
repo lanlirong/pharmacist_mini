@@ -1,0 +1,22 @@
+{
+  "name": "phamarcist_mini",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lanlirong/pharmacist_mini.git"
+  },
+  "author": "llr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lanlirong/pharmacist_mini/issues"
+  },
+  "homepage": "https://github.com/lanlirong/pharmacist_mini#readme",
+  "dependencies": {
+    "@vant/weapp": "^1.6.8"
+  }
+}

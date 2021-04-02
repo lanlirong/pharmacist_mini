@@ -1,0 +1,46 @@
+{
+  "pages": ["pages/index/index", "pages/community/index", "pages/my/index"],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "药师助手",
+    "navigationBarTextStyle": "black"
+  },
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "van-grid": "@vant/weapp/grid/index",
+    "van-grid-item": "@vant/weapp/grid-item/index",
+    "van-search": "@vant/weapp/search/index",
+    "van-image": "@vant/weapp/image/index",
+    "van-notice-bar": "@vant/weapp/notice-bar/index",
+    "van-panel": "@vant/weapp/panel/index"
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#15417f",
+    "backgroundColor": "#fafafa",
+    "position": "bottom",
+    "borderStyle": "black",
+    "list": [{
+            "pagePath": "pages/index/index",
+            "text": "搜索",
+            "iconPath": "images/icons/search.png",
+            "selectedIconPath": "images/icons/search-fill.png"
+        },
+        {
+          "pagePath": "pages/community/index",
+          "text": "社区",
+          "iconPath": "images/icons/community.png",
+          "selectedIconPath": "images/icons/community-fill.png"
+        },
+        {
+            "pagePath": "pages/my/index",
+            "text": "我的",
+            "iconPath": "images/icons/my.png",
+            "selectedIconPath": "images/icons/my-fill.png"
+        }
+    ]
+},
+  "sitemapLocation": "sitemap.json"
+}
