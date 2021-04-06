@@ -7,28 +7,60 @@ Page({
    * 页面的初始数据
    */
   data: {
+    active: 0,
+    show: false,
     params: {
-      searchKey: '感',
-      size: 20,
+      searchKey: '糖尿病',
       page: 1,
-      order: 'asc',
+      size: 20,
+      type: 0,
+      way: 0,
     },
-    diseaseList: [],
+    consultList: [],
+    bookList: [],
+    select: {
+      name: '下拉选择书籍：',
+      value: '',
+    },
     total: 0,
   },
-  input(e) {
-    var { type } = this.data.params;
+  onRadioChange(event) {
     this.setData({
-      diseaseList: [],
+      'params.type': event.detail,
+    });
+  },
+  onTabChange(event) {
+    this.setData({
+      'params.way': event.detail.name,
+      'params.searchKey': '',
+    });
+    if (event.detail.name == 1) this.getBooks();
+  },
+  input(e) {
+    var { searchKey, type, way } = this.data.params;
+    this.setData({
+      consultList: [],
       total: 0,
       params: {
         searchKey: e.detail,
         size: 20,
         page: 1,
-        order: 'asc',
+        type,
+        way,
       },
     });
     this.search();
+  },
+  onClose() {
+    this.setData({ show: false });
+  },
+  onSelect(e) {
+    console.log(e.detail);
+    this.setData({ show: false, 'params.searchKey': e.detail.value });
+    this.search();
+  },
+  showPopup() {
+    this.setData({ show: true });
   },
   async search() {
     if (this.data.params.searchKey == '') {
@@ -36,19 +68,38 @@ Page({
       return;
     }
     const { total, current_page, data } = await request({
-      url: '/disease/list',
+      url: '/consult/list',
+      method: 'POST',
       data: this.data.params,
     });
     this.setData({
-      diseaseList: [...this.data.diseaseList, ...data],
+      consultList: [...this.data.consultList, ...data],
       total: total,
       'params.page': current_page,
+    });
+  },
+
+  async getBooks() {
+    const data = await request({
+      url: '/consult/books',
+      method: 'GET',
+    });
+    console.log(data);
+    var temp = [];
+    data.forEach((item) => {
+      var tempItem = {};
+      tempItem.name = item.B_name;
+      tempItem.value = item.B_ISBN;
+      temp.push(tempItem);
+    });
+    this.setData({
+      bookList: [...temp],
     });
   },
   showDetail(e) {
     var id = e.currentTarget.dataset['index'];
     wx.navigateTo({
-      url: `/pages/disease/detail/index?id=${id}`,
+      url: `/pages/consult/detail/index?id=${id}`,
     });
   },
   /**

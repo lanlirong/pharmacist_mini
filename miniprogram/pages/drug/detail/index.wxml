@@ -115,5 +115,7 @@
 		 src="{{detail.picture}}"
 		/>
 	</view>
+	<van-divider contentPosition="center">到底啦</van-divider>
+
 </view>
 

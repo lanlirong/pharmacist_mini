@@ -9,7 +9,6 @@
 .drug-container .result-container .van-grid-item {
   margin: 10px 0;
   padding-left: 16px;
-  padding-right: 16px;
   box-shadow: var(--box-shadow);
 }
 .drug-container .result-container .van-grid-item .name {
@@ -18,6 +17,7 @@
   color: #323233;
   font-size: 14px;
   line-height: 24px;
+  padding-right: 16px;
 }
 .drug-container .result-container .van-grid-item .name .van-tag {
   margin-left: 10px;
@@ -32,6 +32,7 @@
   color: #969799;
   font-size: 12px;
   line-height: 18px;
+  padding-right: 16px;
 }
 .drug-container .result-container .van-grid-item .detail .arrow {
   float: right;

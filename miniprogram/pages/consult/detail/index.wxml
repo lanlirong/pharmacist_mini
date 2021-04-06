@@ -1,0 +1,69 @@
+<view class="detail-container" hover-class="none" hover-stop-propagation="false">
+	<view class="card">
+		{{detail.Q_content}}
+		<van-tag type="warning">{{detail.K_type}}</van-tag>
+	</view>
+	<view class="head" hover-class="none" hover-stop-propagation="false">
+		知识链接：
+	</view>
+	<view class="card">
+		<van-row>
+			<van-col span="24">{{detail.K_link}}</van-col>
+		</van-row>
+	</view>
+	<view class="head" hover-class="none" hover-stop-propagation="false">
+		问题回答：
+	</view>
+	<view class="card">
+		<van-row>
+			<van-col span="24">{{detail.Q_answer}}</van-col>
+		</van-row>
+	</view>
+	<!-- 链接图片 -->
+	<view class="card img" wx:if="{{detail.islinkUrl === 1}}" >
+		<van-row>
+			<van-col span="24">{{detail.linkPS1}}</van-col>
+			<van-col span="24">
+				<van-image wx:for="{{detail.linkUrl1}}" custom-class="images-logo" width="90%" fit="widthFix" src="{{item}}" />
+			</van-col>
+		</van-row>
+		<van-row>
+			<van-col span="24">{{detail.linkPS2}}</van-col>
+			<van-col span="24">
+				<van-image wx:for="{{detail.linkUrl2}}" custom-class="images-logo" width="90%" fit="widthFix" src="{{item}}" />
+			</van-col>
+		</van-row>
+	</view>
+	<!-- 回答图片 -->
+	<view class="card img" wx:if="{{detail.isanswerUrl === 0}}" >
+		<van-row>
+			<van-col span="24">{{detail.answerPS1}}</van-col>
+			<van-col span="24">
+				<van-image wx:for="{{detail.answerUrl1}}" custom-class="images-logo" width="90%" fit="widthFix" src="{{item}}" />
+			</van-col>
+		</van-row>
+		<van-row>
+			<van-col span="24">{{detail.answerPS2}}</van-col>
+			<van-col span="24">
+				<van-image wx:for="{{detail.answerUrl2}}" custom-class="images-logo" width="90%" fit="widthFix" src="{{item}}" />
+			</van-col>
+		</van-row>
+	</view>
+	<view class="card" hover-class="none" hover-stop-propagation="false">
+		<view class="head reference-head" hover-class="none" hover-stop-propagation="false">
+			参考文献：
+		</view>
+		<view class="card reference">
+			{{detail.Source}}
+		</view>
+		<view class="head reference-head" hover-class="none" hover-stop-propagation="false">
+			来源书籍：
+		</view>
+		<view class="card reference">
+			{{ detail.B_name }}  ISBN:
+			{{ detail.B_ISBN }} 
+		</view>
+	</view>
+	<van-divider contentPosition="center">到底啦</van-divider>
+</view>
+

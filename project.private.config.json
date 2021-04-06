@@ -41,6 +41,18 @@
           "pathName": "pages/disease/detail/index",
           "query": "id=comq33",
           "scene": null
+        },
+        {
+          "name": "pages/consult/index",
+          "pathName": "pages/consult/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/consult/detail/index",
+          "pathName": "pages/consult/detail/index",
+          "query": "id=050031",
+          "scene": null
         }
       ]
     }

@@ -46,5 +46,7 @@
 			<van-col span="24">{{detail.introduction}}</van-col>
 		</van-row>
 	</view>
+	<van-divider contentPosition="center">到底啦</van-divider>
+
 </view>
 

@@ -31,7 +31,7 @@
   <van-grid-item
     icon="user-o"
     link-type="reLaunch"
-    url="/pages/dashboard/index"
+    url="/pages/consult/index"
     text="用药咨询"
   />
   <van-grid-item

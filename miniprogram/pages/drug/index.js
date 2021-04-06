@@ -1,5 +1,6 @@
 // pages/drug/index.js
 import { request } from '../../request/index.js';
+import Toast from '../../miniprogram_npm/@vant/weapp/toast/toast';
 
 Page({
   /**
@@ -93,13 +94,13 @@ Page({
       'params.type': value,
     });
   },
-  input() {
-    var { searchKey, type } = this.data.params;
+  input(e) {
+    var { type } = this.data.params;
     this.setData({
       drugList: [],
       total: 0,
       params: {
-        searchKey: searchKey,
+        searchKey: e.detail,
         type: type,
         size: 20,
         drug_type: [],
@@ -129,7 +130,7 @@ Page({
     this.setData({
       drugList: [...this.data.drugList, ...data],
       total: total,
-      page: current_page,
+      'params.page': current_page,
     });
   },
   showDetail(e) {

@@ -1,0 +1,57 @@
+.consult-container {
+  background-color: #f9f9f9;
+}
+.consult-container .van-radio-group {
+  display: flex;
+  background-color: #fff;
+  padding-bottom: 20px;
+}
+.consult-container .van-radio-group .van-radio {
+  margin-left: 10px;
+}
+.consult-container .text {
+  padding-left: 16px;
+  margin-top: 10px;
+}
+.consult-container .select-book {
+  margin-top: 10px;
+}
+.consult-container .van-tab__pane {
+  background-color: #f9f9f9;
+}
+.consult-container .total {
+  line-height: 40rpx;
+  padding: 10px 20px;
+  text-align: right;
+}
+.consult-container .result-container .van-grid-item {
+  margin: 10px 0;
+  padding-left: 16px;
+  box-shadow: var(--box-shadow);
+}
+.consult-container .result-container .van-grid-item .name {
+  width: 100%;
+  text-align: left;
+  color: #323233;
+  font-size: 14px;
+  line-height: 18px;
+  padding-right: 16px;
+}
+.consult-container .result-container .van-grid-item .name .van-tag {
+  margin-left: 10px;
+}
+.consult-container .result-container .van-grid-item .name .van-tag--primary {
+  color: var(--theme-color);
+}
+.consult-container .result-container .van-grid-item .detail {
+  width: 100%;
+  text-align: left;
+  margin-top: 4px;
+  color: #969799;
+  font-size: 12px;
+  line-height: 18px;
+  padding-right: 16px;
+}
+.consult-container .result-container .van-grid-item .detail .arrow {
+  float: right;
+}

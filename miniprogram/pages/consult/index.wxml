@@ -1,0 +1,57 @@
+<view class="consult-container" hover-class="none" hover-stop-propagation="false">
+	<van-sticky>
+		<van-tabs active="{{ active }}" bind:change="onTabChange">
+			<van-tab title="关键词">
+				<van-search value="{{ params.searchKey }}" placeholder="请输入问题关键字" bind:search="input" />
+				<!-- 过滤 -->
+				<van-radio-group value="{{ params.type }}" bind:change="onRadioChange">
+					<van-radio icon-size="14px" name="1" checked-color="#15417f">问题名称</van-radio>
+					<van-radio icon-size="14px" name="2" checked-color="#15417f">回答内容</van-radio>
+					<van-radio icon-size="14px" name="3" checked-color="#15417f">知识链接</van-radio>
+				</van-radio-group>
+			</van-tab>
+			<van-tab title="书名">
+				<van-cell custom-class="select-book" title="{{select.name}}"  arrow-direction="down"  is-link bind:click="showPopup" />
+				<van-action-sheet
+				 show="{{ show }}"
+				 actions="{{ bookList }}"
+				 cancel-text="取消"
+				 bind:close="onClose"
+				 bind:select="onSelect"
+				 loading="{{true}}"
+				/>
+			</van-tab>
+		</van-tabs>
+	</van-sticky>
+	<!-- 结果列表 -->
+	<view class="total" hover-class="none" hover-stop-propagation="false">
+		共查询到{{total}}条数据
+	</view>
+	<view class="result-container" hover-class="none" hover-stop-propagation="false">
+		<van-grid column-num="1" border="{{ false }}">
+			<van-grid-item
+			 use-slot
+			 wx:for="{{ consultList }}"
+			 wx:key="index"
+			 bind:click="showDetail"
+			 data-index="{{item.id}}"
+			>
+				<view class="name van-multi-ellipsis--l3" hover-class="none" hover-stop-propagation="false">
+					{{index+1}}、 {{item.Q_content}}
+				</view>
+				<view class="detail" hover-class="none" hover-stop-propagation="false">
+
+					<view class="van-multi-ellipsis--l3" hover-class="none" hover-stop-propagation="false">
+						{{item.Q_answer}}
+					</view>
+					<view class="arrow" hover-class="none" hover-stop-propagation="false">
+						更多
+						<van-icon name="arrow" />
+					</view>
+				</view>
+			</van-grid-item>
+		</van-grid>
+	</view>
+	<van-toast id="van-toast" />
+</view>
+

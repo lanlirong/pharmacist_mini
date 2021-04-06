@@ -2,7 +2,7 @@
 	<van-sticky>
 		<van-search
 		 value="{{ params.searchKey }}"
-		 placeholder="{{palceText}}"
+		 placeholder="请输入疾病名称"
 		 background="#15417f"
 		 bind:search="input"
 		/>
@@ -38,6 +38,7 @@
 			</van-grid-item>
 		</van-grid>
 	</view>
+
 	<van-toast id="van-toast" />
 </view>
 
