@@ -1,0 +1,50 @@
+<view class="detail-container" hover-class="none" hover-stop-propagation="false">
+	<view class="name" hover-class="none" hover-stop-propagation="false">
+		{{detail.name}}
+	</view>
+	<view class="card">
+		<van-row>
+			<van-col span="6">发病人群：</van-col>
+			<van-col span="18">{{detail.crowd}}</van-col>
+		</van-row>
+		<van-row>
+			<van-col span="6">传染性：</van-col>
+			<van-col span="18">{{detail.contagion}}</van-col>
+		</van-row>
+		<van-row>
+			<van-col span="6">并发症：</van-col>
+			<van-col span="18">{{detail.complication}}</van-col>
+		</van-row>
+		<van-row>
+			<van-col span="6">治疗方式：</van-col>
+			<van-col span="18">{{detail.treatWay}}</van-col>
+		</van-row>
+		<van-row>
+			<van-col span="6">治疗周期：</van-col>
+			<van-col span="18">{{detail.cycle}}</van-col>
+		</van-row>
+		<van-row>
+			<van-col span="6">治愈率：</van-col>
+			<van-col span="18">{{detail.rate}}</van-col>
+		</van-row>
+		
+	</view>
+	<view class="card" wx:if="detail.drug.length >0">
+		<van-row>
+			<van-col span="6">常用药物：</van-col>
+			<van-col span="18">
+				<a wx:for="{{detail.drug}}" wx:key="index">
+					{{item}}
+				</a>
+			</van-col>
+		</van-row>
+	</view>
+
+	<view class="card">
+		<van-row>
+			<van-col span="6">疾病简介：</van-col>
+			<van-col span="24">{{detail.introduction}}</van-col>
+		</van-row>
+	</view>
+</view>
+

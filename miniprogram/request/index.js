@@ -16,7 +16,8 @@ export const request = (params) => {
   });
 
   // 定义公共的url
-  const baseUrl = 'http://49.235.220.14:7689';
+  // const baseUrl = 'http://49.235.220.14:7689';
+  const baseUrl = 'http://localhost:80';
   return new Promise((resolve, reject) => {
     wx.request({
       ...params,

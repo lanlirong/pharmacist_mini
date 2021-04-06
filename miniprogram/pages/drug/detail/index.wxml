@@ -1,2 +1,119 @@
-<!--pages/drug/detail/index.wxml-->
-<text>pages/drug/detail/index.wxml</text>
+<view class="detail-container" hover-class="none" hover-stop-propagation="false">
+	<view class="name" hover-class="none" hover-stop-propagation="false">
+		{{detail.drug_name}}
+	</view>
+	<view class="card">
+		<van-row>
+			<van-col span="6">商品条码：</van-col>
+			<van-col span="18">{{detail.drug_name}}</van-col>
+		</van-row>
+		<van-row>
+			<van-col span="6">拼音简码：</van-col>
+			<van-col span="18">{{detail.simple_code}}</van-col>
+		</van-row>
+		<van-row>
+			<van-col span="6">本位码：</van-col>
+			<van-col span="18">{{detail.bit_code}}</van-col>
+		</van-row>
+		<van-row>
+			<van-col span="6">规格：</van-col>
+			<van-col span="18">{{detail.specifications}}</van-col>
+		</van-row>
+		<van-row>
+			<van-col span="6">剂型：</van-col>
+			<van-col span="18">{{detail.dosage_form}}</van-col>
+		</van-row>
+		<van-row>
+			<van-col span="6">包装单位：</van-col>
+			<van-col span="18">{{detail.packing_unit}}</van-col>
+		</van-row>
+		<van-row>
+			<van-col span="6">批准文号：</van-col>
+			<van-col span="18">{{detail.approval_number}}</van-col>
+		</van-row>
+		<van-row>
+			<van-col span="6">药品类型：</van-col>
+			<van-col span="18">
+				<van-tag plain type="{{ detail.drug_type == 0? 'success': 'danger'}}">{{ detail.drug_type == 0? '非处方药': '处方药'}}</van-tag>
+			</van-col>
+		</van-row>
+		<van-row>
+			<van-col span="6">性质分类：</van-col>
+			<van-col span="18">{{detail.nature_class}}</van-col>
+		</van-row>
+		<van-row>
+			<van-col span="6">用途分类：</van-col>
+			<van-col span="18">{{detail.use_class}}</van-col>
+		</van-row>
+		<van-row>
+			<van-col span="6">商品名：</van-col>
+			<van-col span="18">{{detail.drug_brand}}</van-col>
+		</van-row>
+	</view>
+	<view class="card" wx:if="detail.mainDiseases.length >0">
+		<van-row>
+			<van-col span="6">主治疾病：</van-col>
+			<van-col span="18">
+				<a wx:for="{{detail.mainDiseases}}" wx:key="index">
+					{{item}}
+				</a>
+			</van-col>
+		</van-row>
+	</view>
+
+	<view class="card">
+		<van-row>
+			<van-col span="6">主要成分：</van-col>
+			<van-col span="18">{{detail.constituents}}</van-col>
+		</van-row>
+		<van-row>
+			<van-col span="6">性状：</van-col>
+			<van-col span="18">{{detail.property}}</van-col>
+		</van-row>
+		<van-row>
+			<van-col span="6">适应症：</van-col>
+			<van-col span="18">{{detail.indication}}</van-col>
+		</van-row>
+		<van-row>
+			<van-col span="6">用法用量：</van-col>
+			<van-col span="18">{{detail.dosage}}</van-col>
+		</van-row>
+		<van-row>
+			<van-col span="6">不良反应：</van-col>
+			<van-col span="18">{{detail.adverse_reactions}}</van-col>
+		</van-row>
+		<van-row>
+			<van-col span="6">禁忌：</van-col>
+			<van-col span="18">{{detail.contraindication}}</van-col>
+		</van-row>
+		<van-row>
+			<van-col span="6">注意事项：</van-col>
+			<van-col span="18">{{detail.attentions}}</van-col>
+		</van-row>
+		<van-row>
+			<van-col span="6">药物相互作用：</van-col>
+			<van-col span="18">{{detail.interreaction}}</van-col>
+		</van-row>
+		<van-row>
+			<van-col span="6">贮藏：</van-col>
+			<van-col span="18">{{detail.depot}}</van-col>
+		</van-row>
+		<van-row>
+			<van-col span="6">生产厂家：</van-col>
+			<van-col span="18">{{detail.manufacturer}}</van-col>
+		</van-row>
+		<van-row>
+			<van-col span="6">生产场地：</van-col>
+			<van-col span="18">{{detail.address}}</van-col>
+		</van-row>
+	</view>
+	<view class="card" wx:if="{{detail.picture !==''}}" hover-class="none" hover-stop-propagation="false">
+		<van-image
+		 custom-class="images-logo"
+		 width="100%"
+		 fit="widthFix"
+		 src="{{detail.picture}}"
+		/>
+	</view>
+</view>
+

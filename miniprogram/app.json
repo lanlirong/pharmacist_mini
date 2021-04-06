@@ -1,5 +1,5 @@
 {
-  "pages": ["pages/index/index", "pages/community/index", "pages/my/index","pages/drug/index"],
+  "pages": ["pages/index/index", "pages/community/index", "pages/my/index","pages/drug/index","pages/drug/detail/index","pages/disease/index","pages/disease/detail/index"],
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
@@ -27,7 +27,9 @@
     "van-empty": "@vant/weapp/empty/index",
     "van-notify": "@vant/weapp/notify/index",
     "van-tag": "@vant/weapp/tag/index",
-    "van-icon": "@vant/weapp/icon/index"
+    "van-icon": "@vant/weapp/icon/index",
+    "van-row": "@vant/weapp/row/index",
+    "van-col": "@vant/weapp/col/index"
   },
   "tabBar": {
     "color": "#999",

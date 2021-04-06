@@ -1,4 +1,5 @@
 {
+  "setting": {},
   "condition": {
     "plugin": {
       "list": []
@@ -20,6 +21,25 @@
         {
           "name": "pages/drug/index",
           "pathName": "pages/drug/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/drug/detail/index",
+          "pathName": "pages/drug/detail/index",
+          "query": "id=75674",
+          "scene": null
+        },
+        {
+          "name": "pages/disease/index",
+          "pathName": "pages/disease/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/disease/detail/index",
+          "pathName": "pages/disease/detail/index",
+          "query": "id=comq33",
           "scene": null
         }
       ]

@@ -1,114 +1,32 @@
 // pages/drug/index.js
 import { request } from '../../request/index.js';
+import Toast from '../../miniprogram_npm/@vant/weapp/toast/toast';
 
 Page({
   /**
    * 页面的初始数据
    */
   data: {
-    actions: [
-      {
-        name: '药品名',
-        value: 0,
-      },
-      {
-        name: '商品名',
-        value: 1,
-      },
-      {
-        name: '商品条形码',
-        value: 2,
-      },
-      {
-        name: '主要成分',
-        value: 3,
-      },
-      {
-        name: '主治疾病',
-        value: 4,
-      },
-    ],
-    show: false,
-    select: {
-      value: 0,
-      label: '药品名',
-    },
-    palceText: '请输入药品名，例如三七',
+    palceText: '请输入疾病名称',
     params: {
-      searchKey: '三七',
-      type: 0,
+      searchKey: '感',
       size: 20,
-      drug_type: [],
-      manufacturer: [],
-      nature_class: [],
-      use_class: [],
       page: 1,
       order: 'asc',
-      orderType: '',
     },
-    drugList: [],
+    diseaseList: [],
     total: 0,
-  },
-  onChange(event) {
-    const { picker, value, index } = event.detail;
-    const palceTexts = [
-      '请输入药品名，例如三七',
-      '请输入药物商品名，例如安立派',
-      '请输入十三位条形码，例如6934497200398',
-      '请输入药品包含的主要成分，例如人参',
-      '请输入疾病名称，例如高血压',
-    ];
-    this.setData({
-      show: false,
-      select: {
-        value: index,
-        label: value,
-      },
-      palceText: palceTexts[index],
-      'params.type': index,
-    });
-  },
-  onClose() {
-    this.setData({ show: false });
-  },
-  showPopup() {
-    this.setData({ show: true });
-  },
-  onSelect(event) {
-    const { name, value } = event.detail;
-    const palceTexts = [
-      '请输入药品名，例如三七',
-      '请输入药物商品名，例如安立派',
-      '请输入十三位条形码，例如6934497200398',
-      '请输入药品包含的主要成分，例如人参',
-      '请输入疾病名称，例如高血压',
-    ];
-    this.setData({
-      show: false,
-      select: {
-        value: value,
-        label: name,
-      },
-      palceText: palceTexts[value],
-      'params.type': value,
-    });
   },
   input() {
     var { searchKey, type } = this.data.params;
     this.setData({
-      drugList: [],
+      diseaseList: [],
       total: 0,
       params: {
         searchKey: searchKey,
-        type: type,
         size: 20,
-        drug_type: [],
-        manufacturer: [],
-        nature_class: [],
-        use_class: [],
         page: 1,
         order: 'asc',
-        orderType: '',
       },
     });
     this.search();
@@ -119,15 +37,14 @@ Page({
       return;
     }
     const { total, current_page, data } = await request({
-      url: '/drug/list',
-      method: 'POST',
+      url: '/disease/list',
       data: this.data.params,
     });
     data.forEach((item) => {
       item.constituents = item.constituents == null ? '---' : item.constituents;
     });
     this.setData({
-      drugList: [...this.data.drugList, ...data],
+      diseaseList: [...this.data.diseaseList, ...data],
       total: total,
       page: current_page,
     });
@@ -135,7 +52,7 @@ Page({
   showDetail(e) {
     var id = e.currentTarget.dataset['index'];
     wx.navigateTo({
-      url: `/pages/drug/detail/index?id=${id}`,
+      url: `/pages/disease/detail/index?id=${id}`,
     });
   },
   /**

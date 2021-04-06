@@ -25,7 +25,7 @@
   <van-grid-item
     icon="search"
     link-type="reLaunch"
-    url="/pages/dashboard/index"
+    url="/pages/disease/index"
     text="疾病检索"
   />
   <van-grid-item
