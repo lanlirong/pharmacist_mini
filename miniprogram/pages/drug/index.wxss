@@ -1,0 +1,33 @@
+.drug-container {
+  background-color: #f9f9f9;
+}
+.drug-container .total {
+  line-height: 40rpx;
+  padding: 10px 20px 0;
+  text-align: right;
+}
+.drug-container .result-container .van-grid-item {
+  margin: 10px 0;
+  box-shadow: var(--box-shadow);
+}
+.drug-container .result-container .van-grid-item .name {
+  width: 100%;
+  text-align: left;
+  color: #323233;
+  font-size: 14px;
+  line-height: 24px;
+}
+.drug-container .result-container .van-grid-item .name .van-tag {
+  margin-left: 10px;
+}
+.drug-container .result-container .van-grid-item .name .van-tag--primary {
+  color: var(--theme-color);
+}
+.drug-container .result-container .van-grid-item .detail {
+  width: 100%;
+  text-align: left;
+  margin-top: 4px;
+  color: #969799;
+  font-size: 12px;
+  line-height: 18px;
+}

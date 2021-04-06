@@ -1,7 +1,9 @@
 <view class="index-container">
   <van-notice-bar mode="closeable" text="技术是开发它的人的共同灵魂。通知公告。。。" />
 <!-- title -->
-<van-image width="100%" height="100" src="../../images/logo.png" />
+<view class="title-container" hover-class="none" hover-stop-propagation="false">
+  <van-image custom-class="images-logo" width="100%" fit="widthFix" src="http://49.235.220.14:3303/logo.png" />
+</view>
 <van-search
   value="{{ value }}"
   placeholder="请输入搜索药品或疾病名称"
@@ -9,13 +11,13 @@
 <!-- 搜索导航 -->
 <van-grid clickable column-num="3">
   <van-grid-item
-    icon="home-o"
+    icon="search"
     link-type="navigateTo"
-    url="/pages/dashboard/index"
+    url="/pages/drug/index"
     text="药品检索"
   />
   <van-grid-item
-    icon="search"
+    icon="cluster-o"
     link-type="reLaunch"
     url="/pages/dashboard/index"
     text="药物相互作用"
@@ -27,19 +29,19 @@
     text="疾病检索"
   />
   <van-grid-item
-    icon="search"
+    icon="user-o"
     link-type="reLaunch"
     url="/pages/dashboard/index"
     text="用药咨询"
   />
   <van-grid-item
-    icon="search"
+    icon="records"
     link-type="reLaunch"
     url="/pages/dashboard/index"
     text="科普宣教"
   />
   <van-grid-item
-    icon="search"
+    icon="friends-o"
     link-type="reLaunch"
     url="/pages/dashboard/index"
     text="药师社区"

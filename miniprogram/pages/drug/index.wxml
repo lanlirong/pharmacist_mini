@@ -1,0 +1,40 @@
+<view class="drug-container" hover-class="none" hover-stop-propagation="false">
+<van-sticky>
+<van-search
+  value="{{ params.searchKey }}"
+  placeholder="{{palceText}}"
+   background="#15417f"
+   bind:search="search"
+/>
+</van-sticky>
+<!-- 过滤 -->
+<van-cell title="按{{select.label}}" is-link bind:click="showPopup" />
+<van-action-sheet
+  show="{{ show }}"
+  actions="{{ actions }}"
+   cancel-text="取消"
+  bind:close="onClose"
+  bind:select="onSelect"
+/>
+<!-- 结果列表 -->
+<view class="total" hover-class="none" hover-stop-propagation="false">
+  共查询到{{total}}条数据
+</view>
+<view class="result-container" hover-class="none" hover-stop-propagation="false">
+<van-grid column-num="1" border="{{ false }}">
+  <van-grid-item  use-slot wx:for="{{ drugList }}" wx:key="index" bind:click="showDetail" data-index="{{item.id}}">
+    <view class="name" hover-class="none" hover-stop-propagation="false">
+      {{index+1}}.{{item.drug_name}}<van-tag plain type="primary">{{item.nature_class}}</van-tag>
+      
+    </view>
+    <view class="detail van-multi-ellipsis--l3" hover-class="none" hover-stop-propagation="false">
+    <view class="bar_code" hover-class="none" hover-stop-propagation="false">
+       本位码： {{item.bar_code}}
+      </view>
+      主要成分：{{item.constituents}}
+    </view>
+  </van-grid-item>
+</van-grid>
+</view>
+
+</view>
