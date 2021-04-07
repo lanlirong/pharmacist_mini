@@ -12,9 +12,35 @@ const getCurrentPageParam = () => {
   let options = currentPage.options; //如果要获取url中所带的参数可以查看options
   return options;
 };
+/* 缓存图片*/
+const setImgCache = (url) => {
+  wx.downloadFile({
+    url: url,
+    success: function (res) {
+      if (res.statusCode === 200) {
+        console.log('图片下载成功' + res.tempFilePath);
+        const fs = wx.getFileSystemManager();
+        fs.saveFile({
+          tempFilePath: res.tempFilePath, // 传入一个临时文件路径
+          success(res) {
+            console.log('图片缓存成功', res.savedFilePath); // res.savedFilePath 为一个本地缓存文件路径
+            wx.setStorageSync('image_cache', res.savedFilePath);
+          },
+        });
+      } else {
+        console.log('响应失败', res.statusCode);
+      }
+    },
+    fail: function (error) {
+      console.log(error);
+    },
+  });
+};
+
 module.exports = {
   getCurrentPageUrl,
   getCurrentPageParam,
+  setImgCache,
 };
 /*使用
 import utils from '../../../utils/util'

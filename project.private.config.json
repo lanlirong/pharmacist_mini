@@ -53,6 +53,18 @@
           "pathName": "pages/consult/detail/index",
           "query": "id=050031",
           "scene": null
+        },
+        {
+          "name": "pages/interaction/index",
+          "pathName": "pages/interaction/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/interaction/detail/index",
+          "pathName": "pages/interaction/detail/index",
+          "query": "name=阿利维A酸",
+          "scene": null
         }
       ]
     }

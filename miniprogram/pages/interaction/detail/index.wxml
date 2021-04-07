@@ -1,0 +1,49 @@
+<view class="detail-container" hover-class="none" hover-stop-propagation="false">
+	<view class="name" hover-class="none" hover-stop-propagation="false">
+		{{name}}
+	</view>
+	<van-tree-select
+	 items="{{ items }}"
+	 height="100vh"
+	 main-active-index="{{ mainActiveIndex }}"
+	 bind:click-nav="onClickNav"
+	 main-item-class="van-multi-ellipsis--l3"
+	>
+		<view class="card-container" slot="content">
+			<view class="card">
+				{{select.name}} --> {{select.interaction}}
+				<van-row>
+					<van-col span="8">结果：</van-col>
+					<van-col span="16">{{select.result}}</van-col>
+				</van-row>
+
+				<van-row>
+					<van-col span="8">临床建议：</van-col>
+					<van-col span="16">{{select.suggest}}</van-col>
+				</van-row>
+				<van-row>
+					<van-col span="24">临床证据：</van-col>
+					<van-col span="24">{{select.evidence}}</van-col>
+				</van-row>
+				<van-row>
+					<van-col span="8">证据级别：</van-col>
+					<van-col span="16">
+						<van-tag type="warning">{{select.level}}</van-tag>
+					</van-col>
+				</van-row>
+				<van-divider/>
+
+				<van-row wx:if="{{select.references.length}}">
+					<van-col span="24">参考文献：</van-col>
+					<van-col span="24" wx:for="{{select.references}}" wx:key="index">
+						{{item}}
+					</van-col>
+				</van-row>
+			</view>
+
+		</view>
+	</van-tree-select>
+	<van-divider contentPosition="center">到底啦</van-divider>
+
+</view>
+

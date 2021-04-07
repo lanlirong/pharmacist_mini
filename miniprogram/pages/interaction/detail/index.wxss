@@ -1,0 +1,32 @@
+.detail-container {
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+}
+.detail-container .van-tree-select {
+  --tree-select-item-active-color: #15417f;
+}
+.detail-container .name {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 26px;
+  margin: 26px auto;
+  border-bottom: 2px solid #8597b6;
+  border-radius: 4px;
+}
+.detail-container .card {
+  background-color: #fff;
+  margin-bottom: 20px;
+  padding: 20px 16px;
+}
+.detail-container .card .van-row {
+  color: #969799;
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 10px;
+}
+.detail-container .card .van-row a {
+  padding-right: 10px;
+  color: var(--text-link);
+  text-decoration: underline;
+}

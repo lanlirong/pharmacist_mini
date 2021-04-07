@@ -1,23 +1,17 @@
 // pages/index/index.js
-Component({
-  /**
-   * 组件的属性列表
-   */
-  properties: {
-
-  },
-
+import utils from '../../utils/index';
+Page({
   /**
    * 组件的初始数据
    */
   data: {
-
+    imgUrl: 'http://49.235.220.14:3303/logo.png',
+    tempImgUrl: '',
   },
-
   /**
-   * 组件的方法列表
+   * 生命周期函数--监听页面加载
    */
-  methods: {
-
-  }
-})
+  onLoad: function (options) {
+    // utils.setImgCache(this.data.imgUrl);
+  },
+});

@@ -1,5 +1,5 @@
 <view class="index-container">
-  <van-notice-bar mode="closeable" text="技术是开发它的人的共同灵魂。通知公告。。。" />
+  <van-notice-bar mode="closeable" text="通知公告通知公告通知公告。通知公告。。。" />
 <!-- title -->
 <view class="title-container" hover-class="none" hover-stop-propagation="false">
   <van-image custom-class="images-logo" width="100%" fit="widthFix" src="http://49.235.220.14:3303/logo.png" />
@@ -19,7 +19,7 @@
   <van-grid-item
     icon="cluster-o"
     link-type="reLaunch"
-    url="/pages/dashboard/index"
+    url="/pages/interaction/index"
     text="药物相互作用"
   />
   <van-grid-item

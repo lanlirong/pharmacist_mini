@@ -1,0 +1,42 @@
+<view class="interaction-container" hover-class="none" hover-stop-propagation="false">
+	<van-sticky>
+		<van-search
+		 value="{{ params.searchKey }}"
+		 placeholder="请输入药品名称"
+		 background="#15417f"
+		 bind:search="input"
+		/>
+	</van-sticky>
+	<!-- 结果列表 -->
+	<view class="total" hover-class="none" hover-stop-propagation="false">
+		共查询到{{interactionList.length}}条数据
+	</view>
+	<view class="result-container" hover-class="none" hover-stop-propagation="false">
+		<van-grid column-num="1" border="{{ false }}">
+			<van-grid-item
+			 use-slot
+			 wx:for="{{ interactionList }}"
+			 wx:key="index"
+			 bind:click="showDetail"
+			 data-index="{{item.name}}"
+			>
+				<view class="name" hover-class="none" hover-stop-propagation="false">
+					{{index+1}}、{{item.name}}
+
+				</view>
+				<view class="detail" hover-class="none" hover-stop-propagation="false">
+					<view class="van-multi-ellipsis--l3" hover-class="none" hover-stop-propagation="false">
+						相互作用成分汇总：{{item.interaction}}
+					</view>
+					<view class="arrow" hover-class="none" hover-stop-propagation="false">
+						详情
+						<van-icon name="arrow" />
+					</view>
+				</view>
+			</van-grid-item>
+		</van-grid>
+	</view>
+
+	<van-toast id="van-toast" />
+</view>
+

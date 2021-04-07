@@ -25,4 +25,9 @@ page {
   /* radio */
   --radio-size: 8rpx;
   --radio-checked-icon-color: #15417f;
+
+  /* tree-select */
+  --tree-select-item-active-color: #15417f;
+  /* tab */
+  --tabs-default-color: #15417f;
 }

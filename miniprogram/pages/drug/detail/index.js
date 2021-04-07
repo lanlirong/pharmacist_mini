@@ -9,11 +9,6 @@ Page({
     id: '',
     detail: {},
   },
-
-  /**
-   * 组件的初始数据
-   */
-  data: {},
   onLoad: function (options) {
     this.setData({ id: options.id });
     this.getDetail();
