@@ -19,13 +19,29 @@ Page({
     this.getDetail();
   },
   async getDetail() {
-    const data = await request({
+    const res = await request({
       url: '/science/one',
       data: { id: this.data.id },
     });
-
-    this.setData({
-      detail: data,
-    });
+    if (res.content) {
+      res.content = res.content.replace(
+        /\<img/g,
+        '<img style="width:100%;height:auto;display: block;"'
+      );
+      res.content = res.content.replace(
+        /\<blockquote class="ql-align-justify"/g,
+        '<blockquote class="ql-align-justify blockquote"'
+      );
+      res.content = res.content.replace(
+        /\<h2 class="ql-align-justify"/g,
+        '<h2 class="ql-align-justify h2"'
+      );
+      res.content = res.content.replace(/\<h2/g, '<h2 class="h2"');
+      res.content = res.content.replace(/\<ol/g, '<ol class="ol"');
+      res.content = res.content.replace(/\<ul/g, '<ul class="ul"');
+      this.setData({
+        detail: res,
+      });
+    }
   },
 });

@@ -77,6 +77,12 @@
           "pathName": "pages/science/detail/index",
           "query": "id=13",
           "scene": null
+        },
+        {
+          "name": "pages/science/detail/index",
+          "pathName": "pages/science/detail/index",
+          "query": "id=14",
+          "scene": null
         }
       ]
     }

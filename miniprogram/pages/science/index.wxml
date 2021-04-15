@@ -27,7 +27,7 @@
 				<view class="detail" hover-class="none" hover-stop-propagation="false">
 				
           <view class="van-multi-ellipsis--l3" hover-class="none" hover-stop-propagation="false">
-            疾病简介：{{item.description}}	
+            {{item.description}}	
           </view>
           <view class="arrow" hover-class="none" hover-stop-propagation="false">
           更多<van-icon name="arrow" />

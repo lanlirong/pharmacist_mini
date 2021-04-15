@@ -58,10 +58,10 @@
 		 class="card reference"
 		 wx:for="{{ hotList }}"
 		 wx:key="index"
-		 bind:click="showDetail"
+		 bindtap="showDetail"
 		 data-index="{{item.id}}"
 		>
-			<view class="name van-multi-ellipsis--l3" hover-class="none" hover-stop-propagation="false">
+			<view class="name van-multi-ellipsis--l1" hover-class="none" hover-stop-propagation="false">
 				{{item.title}}
 			</view>
 			<view class="detail" hover-class="none" hover-stop-propagation="false">
