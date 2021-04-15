@@ -65,6 +65,18 @@
           "pathName": "pages/interaction/detail/index",
           "query": "name=阿利维A酸",
           "scene": null
+        },
+        {
+          "name": "pages/science/index",
+          "pathName": "pages/science/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/science/detail/index",
+          "pathName": "pages/science/detail/index",
+          "query": "id=13",
+          "scene": null
         }
       ]
     }

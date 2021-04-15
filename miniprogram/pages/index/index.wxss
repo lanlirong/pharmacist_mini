@@ -4,3 +4,83 @@
 .index-container .title-container {
   padding: 20rpx 80rpx 0rpx;
 }
+.index-container .hot-article,
+.index-container .hot-post {
+  padding: 20rpx;
+}
+.index-container .hot-article .head,
+.index-container .hot-post .head {
+  font-size: 28rpx;
+  margin-left: 16px;
+  padding-left: 10px;
+  margin-bottom: 10px;
+  border-left: 4px solid red;
+}
+.index-container .hot-article .card,
+.index-container .hot-post .card {
+  background-color: #fff;
+  margin-bottom: 20px;
+  padding: 20px 16px;
+  text-align: left;
+  line-height: 20px;
+}
+.index-container .hot-article .card .van-row,
+.index-container .hot-post .card .van-row {
+  text-indent: 20px;
+  color: #969799;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+.index-container .hot-article .card .van-row a,
+.index-container .hot-post .card .van-row a {
+  padding-right: 10px;
+  color: var(--text-link);
+  text-decoration: underline;
+}
+.index-container .hot-article .card .name,
+.index-container .hot-post .card .name {
+  width: 100%;
+  text-align: left;
+  color: #323233;
+  font-size: 14px;
+  line-height: 18px;
+  padding-right: 16px;
+}
+.index-container .hot-article .card .name .van-tag,
+.index-container .hot-post .card .name .van-tag {
+  margin-left: 10px;
+}
+.index-container .hot-article .card .name .van-tag--primary,
+.index-container .hot-post .card .name .van-tag--primary {
+  color: var(--theme-color);
+}
+.index-container .hot-article .card .detail,
+.index-container .hot-post .card .detail {
+  width: 100%;
+  text-align: left;
+  margin-top: 4px;
+  color: #969799;
+  font-size: 12px;
+  line-height: 18px;
+  padding-right: 16px;
+}
+.index-container .hot-article .card .detail .arrow,
+.index-container .hot-post .card .detail .arrow {
+  float: right;
+  display: flex;
+}
+.index-container .hot-article .reference,
+.index-container .hot-post .reference,
+.index-container .hot-article img,
+.index-container .hot-post img {
+  background-color: #f7f7f9;
+  border-left: 3px solid #8597b6;
+  border-radius: 4px;
+}
+.index-container .hot-article .reference-head,
+.index-container .hot-post .reference-head,
+.index-container .hot-article img,
+.index-container .hot-post img {
+  margin-left: 0;
+}

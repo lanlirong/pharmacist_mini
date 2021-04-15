@@ -2,7 +2,75 @@
   flex-direction: column;
   .title-container {
     padding: 20rpx 80rpx 0rpx;
-    // display: flex;
-    // justify-content: center;
+  }
+  .hot-article,
+  .hot-post {
+    padding: 20rpx;
+    .head {
+      font-size: 28rpx;
+      margin-left: 16px;
+      padding-left: 10px;
+      margin-bottom: 10px;
+      border-left: 4px solid red;
+    }
+    .card {
+      background-color: #fff;
+      margin-bottom: 20px;
+      padding: 20px 16px;
+      text-align: left;
+      line-height: 20px;
+
+      .van-row {
+        text-indent: 20px;
+        color: #969799;
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 10px;
+        a {
+          padding-right: 10px;
+          color: var(--text-link);
+          text-decoration: underline;
+        }
+      }
+      .name {
+        width: 100%;
+        text-align: left;
+        color: #323233;
+        font-size: 14px;
+        line-height: 18px;
+        padding-right: 16px;
+
+        .van-tag {
+          margin-left: 10px;
+        }
+        .van-tag--primary {
+          color: var(--theme-color);
+        }
+      }
+      .detail {
+        width: 100%;
+        text-align: left;
+        margin-top: 4px;
+        color: #969799;
+        font-size: 12px;
+        line-height: 18px;
+        padding-right: 16px;
+
+        .arrow {
+          float: right;
+          display: flex;
+        }
+      }
+    }
+    .reference,
+    img {
+      background-color: #f7f7f9;
+      border-left: 3px solid #8597b6;
+      border-radius: 4px;
+    }
+    .reference-head,
+    img {
+      margin-left: 0;
+    }
   }
 }

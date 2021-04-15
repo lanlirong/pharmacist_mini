@@ -1,0 +1,10 @@
+<view class="detail-container">
+  <h1>{{ detail.title}}</h1>
+   <div class="info">
+      <p>作者：{{ detail.creator }}</p>
+      <p>最后修改于：{{ detail.updateTime }}</p>
+    </div>
+     <rich-text class="content" nodes="{{detail.content}}"></rich-text>
+	<van-divider contentPosition="center">到底啦</van-divider>
+
+</view>

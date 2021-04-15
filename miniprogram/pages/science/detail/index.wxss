@@ -1,0 +1,102 @@
+.detail-container {
+  margin: 20px auto;
+  padding: 20px 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.detail-container h1 {
+  width: 100%;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--theme-color-1);
+  text-align: center;
+  position: relative;
+}
+.detail-container .info {
+  display: flex;
+  flex-direction: column;
+  line-height: 18px;
+  color: #999;
+  font-size: 12px;
+  margin: 10px auto;
+  text-align: center;
+}
+.detail-container .content {
+  width: 100%;
+  line-height: 1.5em;
+}
+.detail-container .content blockquote {
+  border-left: 4px solid #ccc;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  padding-left: 16px;
+}
+.detail-container .content ol {
+  padding-left: 1.5em;
+}
+.detail-container .content ol li {
+  counter-reset: list-1 list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9;
+  counter-increment: list-0;
+}
+.detail-container .content ol li:not(.ql-direction-rtl)::before {
+  margin-left: -1.5em;
+  margin-right: 0.3em;
+  text-align: right;
+}
+.detail-container .content ol li:before {
+  content: counter(list-0, decimal) '. ';
+  display: inline-block;
+  white-space: nowrap;
+  width: 1.2em;
+}
+.detail-container .content ul {
+  padding-left: 1.5em;
+}
+.detail-container .content ul li:not(.ql-direction-rtl)::before {
+  content: '\2022';
+  margin-left: -1.5em;
+  margin-right: 0.3em;
+  text-align: right;
+  display: inline-block;
+  white-space: nowrap;
+  width: 1.2em;
+}
+.detail-container .content ul li:not(.ql-direction-rtl) {
+  padding-left: 1.5em;
+}
+.detail-container .content .ql-indent-1 {
+  padding-left: 3em;
+}
+.detail-container .content .ql-indent-2 {
+  padding-left: 6em;
+}
+.detail-container .content .ql-indent-3 {
+  padding-left: 9em;
+}
+.detail-container .content .ql-indent-4 {
+  padding-left: 12em;
+}
+.detail-container .content .ql-indent-5 {
+  padding-left: 15em;
+}
+.detail-container .content h2 {
+  font-weight: 700;
+  font-size: 16px;
+}
+.detail-container .content h3 {
+  font-weight: 500;
+  font-size: 16px;
+}
+.detail-container .content h4 {
+  font-weight: 400;
+  font-size: 14px;
+}
+.detail-container .content img {
+  width: unset;
+  max-width: 100%;
+  width: 100%;
+}

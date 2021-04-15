@@ -37,4 +37,5 @@
 }
 .interaction-container .result-container .van-grid-item .detail .arrow {
   float: right;
+  display: flex;
 }

@@ -1,5 +1,5 @@
 {
-  "pages": ["pages/index/index", "pages/community/index", "pages/my/index","pages/drug/index","pages/drug/detail/index","pages/disease/index","pages/disease/detail/index","pages/consult/index","pages/consult/detail/index","pages/interaction/index","pages/interaction/detail/index"],
+  "pages": ["pages/index/index", "pages/community/index", "pages/my/index","pages/drug/index","pages/drug/detail/index","pages/disease/index","pages/disease/detail/index","pages/consult/index","pages/consult/detail/index","pages/interaction/index","pages/interaction/detail/index","pages/science/index","pages/science/detail/index"],
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
