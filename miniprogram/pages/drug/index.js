@@ -159,7 +159,25 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {},
+  onLoad: function (options) {
+    if (options.searchkey) {
+      this.setData({
+        params: {
+          searchKey: options.searchkey,
+          type: 0,
+          size: 20,
+          drug_type: [],
+          manufacturer: [],
+          nature_class: [],
+          use_class: [],
+          page: 1,
+          order: 'asc',
+          orderType: '',
+        },
+      });
+      this.search();
+    }
+  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成

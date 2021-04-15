@@ -1,4 +1,5 @@
 <view class="index-container">
+<van-toast id="van-toast" />
 	<!-- <van-notice-bar mode="closeable" text="通知公告通知公告通知公告。通知公告。。。" /> -->
 	<!-- title -->
 	<view class="title-container" hover-class="none" hover-stop-propagation="false">
@@ -9,7 +10,7 @@
 		 src="http://49.235.220.14:3305/img/logo.0887ad18.png"
 		/>
 	</view>
-	<van-search value="{{ value }}" placeholder="请输入搜索药品或疾病名称" />
+	<van-search value="{{ searchKey }}" bind:search="simpleSearch"  bind:change="onChange" placeholder="快捷搜索，请输入搜索药品或疾病名称" />
 	<!-- 搜索导航 -->
 	<van-grid clickable column-num="3">
 		<van-grid-item
